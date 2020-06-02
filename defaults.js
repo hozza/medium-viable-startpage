@@ -49,3 +49,10 @@ const MASTER_MAP = [
 	}
 ];
 
+
+var settings = {
+	name: "Benedict",
+	shortcut_starter: "tab",
+	shortcut_timeout: 3000,
+	background_url: "assets/bg-orig-VD8ldiL.jpg"
+};

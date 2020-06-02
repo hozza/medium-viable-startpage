@@ -1,15 +1,6 @@
 // @format
 
-const NAME = "John";
 const WELCOME_MESSAGE_TEMPLATE = ["night", "morning", "afternoon", "evening"];
-
-// All shortcuts are in a `SHORTCUT_STARTER+shortcutKey` format.
-// So, for example, pressing `tab+q` would redirect you to https://google.com/?q=q
-const SHORTCUT_STARTER = "tab";
-
-// How much time (in milliseconds) you have to press shortcutKey after pressing SHORTCUT_STARTER.
-// Also change --SHORTCUT_TIMEOUT in styles.css if you change this option.
-const SHORTCUT_TIMEOUT = 1500;
 
 // MASTER_MAP, and other settings will be loaded separately  
 
@@ -21,6 +12,9 @@ let listeningForShortcut = false;
 let listenerTimeout;
 
 function setupWelcomeMessage() {
+	
+	let NAME = settings.name;
+
 	let curHours = new Date().getHours();
 	curHours = Math.floor(curHours / 6); // Simply dividing current hours by 6 proves to be a good enough aproximation.
 	if (curHours == 4) curHours = 3;
@@ -66,6 +60,10 @@ function setupGroups() {
 }
 
 function shortcutListener(e) {
+
+	let SHORTCUT_STARTER = settings.shortcut_starter;
+	let SHORTCUT_TIMEOUT = settings.shortcut_timeout;
+
 	let key = e.key.toLowerCase();
 
 	if (listeningForShortcut && getUrl.hasOwnProperty(key)) {
@@ -91,6 +89,9 @@ function shortcutListener(e) {
 }
 
 function main() {
+	
+	document.body.style.backgroundImage="url('"+settings.background_url+"')";
+
 	setupWelcomeMessage();
 	setupGroups();
 	document.addEventListener("keyup", shortcutListener, false);
