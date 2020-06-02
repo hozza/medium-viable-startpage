@@ -1,4 +1,6 @@
-const MASTER_MAP = [
+var storage = new Object();
+
+storage['bookmarks'] = [
 	{
 		groupName: "Resources",
 		items: [
@@ -62,7 +64,7 @@ const MASTER_MAP = [
 ];
 
 
-var settings = {
+storage['settings'] = {
 	name: "Benedict",
 	shortcut_starter: "tab",
 	shortcut_timeout: 3000,

@@ -2,7 +2,7 @@
 
 const WELCOME_MESSAGE_TEMPLATE = ["night", "morning", "afternoon", "evening"];
 
-// MASTER_MAP, and other settings will be loaded separately  
+// MASTER_MAP, and other settings will be loaded separately
 
 let $container = document.getElementById("content");
 let getUrl = {};
@@ -12,8 +12,7 @@ let listeningForShortcut = false;
 let listenerTimeout;
 
 function setupWelcomeMessage() {
-	
-	let NAME = settings.name;
+	let NAME = storage.settings.name;
 
 	let curHours = new Date().getHours();
 	curHours = Math.floor(curHours / 6); // Simply dividing current hours by 6 proves to be a good enough aproximation.
@@ -23,8 +22,9 @@ function setupWelcomeMessage() {
 }
 
 function setupGroups() {
-	
-	$container.innerHTML = '';
+	let MASTER_MAP = storage.bookmarks;
+
+	$container.innerHTML = "";
 
 	for (let i = 0; i < MASTER_MAP.length; i++) {
 		let curGroupData = MASTER_MAP[i];
@@ -60,9 +60,8 @@ function setupGroups() {
 }
 
 function shortcutListener(e) {
-
-	let SHORTCUT_STARTER = settings.shortcut_starter;
-	let SHORTCUT_TIMEOUT = settings.shortcut_timeout;
+	let SHORTCUT_STARTER = storage.settings.shortcut_starter;
+	let SHORTCUT_TIMEOUT = storage.settings.shortcut_timeout;
 
 	let key = e.key.toLowerCase();
 
@@ -88,9 +87,23 @@ function shortcutListener(e) {
 	}
 }
 
+function handle_local_storage(key) {
+	// init local storage
+	if (localStorage.getItem(key) === null) {
+		window.localStorage.setItem(key, JSON.stringify(storage[key]));
+	}
+	// retrieve existing storage
+	else {
+		storage[key] = JSON.parse(window.localStorage.getItem(key));
+	}
+}
+
 function main() {
-	
-	document.body.style.backgroundImage="url('"+settings.background_url+"')";
+	handle_local_storage("settings");
+	handle_local_storage("bookmarks");
+
+	document.body.style.backgroundImage =
+		"url('" + storage.settings.background_url + "')";
 
 	setupWelcomeMessage();
 	setupGroups();
