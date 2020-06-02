@@ -6,7 +6,7 @@ This is a startpage *that @0-Tikaro* put together on one lazy afternoon, which w
 
 ### Goals of the modifications by @hozza
  - [x] TODO auto blur background image, ready for db
- - [ ] TODO search box
+ - [x] TODO search box
  - [ ] TODO local-storage db, for settings page
  - [ ] TODO locally-stored bookmarks
  - [ ] TODO flat-color and waves background option (source: https://tobias-schoch.github.io/startpage-wave/)
@@ -34,7 +34,7 @@ TODO fit the setting button and change the settings to store locally.
 ## Installation & Usage
 To install this startpage and use it on your local machine, simply clone the repository and set your browser's new tab URL to the `index.html` filepath.
 
-TODO load the startparge bu Github Pages URL and enter in your local settings, then save as your start page.
+TODO load the startpage with Github Pages URL and enter in your local settings, then save as your start page.
 
 ### Known Issues / Gotchas
 
