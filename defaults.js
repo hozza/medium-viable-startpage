@@ -1,50 +1,62 @@
 const MASTER_MAP = [
 	{
-		groupName: "Studies",
+		groupName: "Resources",
 		items: [
 			{
-				name: "Item A",
-				shortcutKey: "q",
-				url: "https://google.com/?q=q"
+				name: "Reddit",
+				shortcutKey: "r",
+				url: "https://reddit.com"
 			},
 			{
-				name: "Item B",
-				shortcutKey: "w",
-				url: "https://google.com/?q=w"
+				name: "GitHub",
+				shortcutKey: "g",
+				url: "https://github.com"
 			},
-			{ name: "Item C", shortcutKey: "e", url: "https://google.com/?q=e" }
+			{
+				name: "r/startpages", 
+				shortcutKey: "s", 
+				url: "https://www.reddit.com/r/startpages/"
+			}
 		]
 	},
 	{
 		groupName: "Work",
 		items: [
 			{
-				name: "Item D",
-				shortcutKey: "a",
-				url: "https://google.com/?q=a"
+				name: "Gmail",
+				shortcutKey: "m",
+				url: "https://gmail.com/"
 			},
 			{
-				name: "Item E",
-				shortcutKey: "s",
-				url: "https://google.com/?q=s"
+				name: "Todoist",
+				shortcutKey: "t",
+				url: "https://todoist.com"
 			},
-			{ name: "Item F", shortcutKey: "d", url: "https://google.com/?q=d" }
+			{ 
+				name: "Unsplash", 
+				shortcutKey: "p", 
+				url: "https://unsplash.com/"
+			}
 		]
 	},
 	{
 		groupName: "Personal",
 		items: [
 			{
-				name: "Item I",
-				shortcutKey: "z",
-				url: "https://google.com/?q=z"
+				name: "Stardue Valley",
+				shortcutKey: "c",
+				url: "https://www.stardewvalley.net/"
 			},
 			{
-				name: "Item J",
-				shortcutKey: "x",
-				url: "https://google.com/?q=x"
+				name: "YouTube",
+				shortcutKey: "u",
+				url: "https://youtube.com/"
 			},
-			{ name: "Item K", shortcutKey: "c", url: "https://google.com/?q=c" }
+			{ 
+				name: "Netflix", 
+				shortcutKey: "n", 
+				url: "https://netflix.com/"
+			}
 		]
 	}
 ];
