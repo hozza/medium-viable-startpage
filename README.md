@@ -10,6 +10,7 @@ This is a startpage *that @0-Tikaro* put together on one lazy afternoon, which w
  - [ ] TODO local-storage db, for settings page
  - [ ] TODO locally-stored bookmarks
  - [ ] TODO flat-color and waves background option (source: https://tobias-schoch.github.io/startpage-wave/)
+ -  add auto rando background from unsplash option "https://source.unsplash.com/$WITHx$HEIGHT/weekly?background,nature"
 
 Local offline storage in browser will allow the user to change wallpaper, fonts, search engine and other options without coding or or forking a local copy. Once setup, the "*medium* viable startpage" can be offered statically buy Github Pages for all to use and customise privately.
 
