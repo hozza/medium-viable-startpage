@@ -81,6 +81,9 @@ function setupWelcomeMessage() {
 }
 
 function setupGroups() {
+	
+	$container.innerHTML = '';
+
 	for (let i = 0; i < MASTER_MAP.length; i++) {
 		let curGroupData = MASTER_MAP[i];
 
